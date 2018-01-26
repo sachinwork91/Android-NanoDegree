@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.mediaplayerapp.MainActivity"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media Player"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/musictv"
+        android:padding="50dp"
+        />
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/musictv"
+        android:src="@mipmap/song"
+        android:id="@+id/songImage"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/startTime"
+        android:layout_above="@+id/back"
+        android:text="Small Text"
+        android:layout_marginBottom="40dp"
+        />
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/startTime"
+        android:layout_toLeftOf="@+id/remainingTime"
+        android:id="@+id/seekbar"
+        android:layout_alignTop="@id/startTime"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/remainingTime"
+        android:layout_above="@+id/back"
+        android:text="Remaining Time"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/startTime"
+        android:layout_marginBottom="40dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forward"
+        android:id="@+id/fastfwdbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+     <Button
+
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/pause"
+         android:id="@+id/pausebtn"
+         android:layout_alignParentBottom="true"
+         android:layout_marginLeft="10dp"
+         android:layout_toRightOf="@id/fastfwdbtn"
+         android:layout_alignTop="@+id/fastfwdbtn" />
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:id="@+id/back"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/pausebtn"
+        android:layout_alignTop="@+id/pausebtn" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/rewind"
+        android:layout_below="@id/songImage"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/back"
+        android:layout_toRightOf="@id/back"
+        android:id="@+id/rewind" />
+
+
+</RelativeLayout>
